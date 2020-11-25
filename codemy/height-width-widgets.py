@@ -22,23 +22,23 @@ class MyGridLayout(GridLayout):
 
         ## Add widgets 
         #Add Label
-        self.top_grid.add_widget(Label(text="Name: "))
+        self.top_grid.add_widget(Label(text="Name: ",size_hint_y=None,height=50,size_hint_x=None,width=200))
         ## Add Input Box 
-        self.name = TextInput(multiline=False)
+        self.name = TextInput(multiline=True,size_hint_y=None,height=50,size_hint_x=None,width=200)
         self.top_grid.add_widget(self.name)
 
 
-        self.top_grid.add_widget(Label(text="Favorite Pizza:"))
-        self.pizza = TextInput(multiline=False)
+        self.top_grid.add_widget(Label(text="Favorite Pizza:",size_hint_y=None,height=50,size_hint_x=None,width=200))
+        self.pizza = TextInput(multiline=False,size_hint_y=None,height=50,size_hint_x=None,width=200)
         self.top_grid.add_widget(self.pizza)
 
-        self.top_grid.add_widget(Label(text="Favorite Color:"))
-        self.color = TextInput(multiline=False)
+        self.top_grid.add_widget(Label(text="Favorite Color:",size_hint_y=None,height=50,size_hint_x=None,width=200))
+        self.color = TextInput(multiline=False,size_hint_y=None,height=50,size_hint_x=None,width=200)
         self.top_grid.add_widget(self.color)
 
        
         self.add_widget(self.top_grid)
-        self.submit = Button(text="Submit",font_size=32)
+        self.submit = Button(text="Submit",font_size=32,size_hint_y=None,height=50,size_hint_x=None,width=200)
         self.submit.bind(on_press=self.press)
         self.add_widget(self.submit)
 

@@ -16,15 +16,25 @@ class MyGridLayout(GridLayout):
 
         ## Set columns 
         self.cols = 1
+        self.row_force_default=True
+        self.row_default_height=120
+        self.col_force_default=True
+        self.col_default_width=100
 
-        self.top_grid = GridLayout()
+        self.top_grid = GridLayout(
+            row_force_default=True,
+            row_default_height=40,
+            col_force_default=True,
+            col_default_width=100
+            
+        )
         self.top_grid.cols  = 2
 
         ## Add widgets 
         #Add Label
         self.top_grid.add_widget(Label(text="Name: "))
         ## Add Input Box 
-        self.name = TextInput(multiline=False)
+        self.name = TextInput(multiline=True)
         self.top_grid.add_widget(self.name)
 
 
@@ -38,7 +48,7 @@ class MyGridLayout(GridLayout):
 
        
         self.add_widget(self.top_grid)
-        self.submit = Button(text="Submit",font_size=32)
+        self.submit = Button(text="Submit",font_size=32,size_hint_y=None,height=50,size_hint_x=None,width=200)
         self.submit.bind(on_press=self.press)
         self.add_widget(self.submit)
 

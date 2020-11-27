@@ -1,23 +1,94 @@
 <MyGridLayout>
-
+    s401:s401
+    s421:s421
+    s433:s433
+    s416:s416
+    s406:s406
+    s434:s434
+    s445:s445
+    b401:b401
     GridLayout:
-        cols: 1
+        cols: 2
         size: root.width, root.height
-        Image:
-            source: 'NAlogo.png'
-            size: self.texture_size
         GridLayout:
-            cols:2
-            rows:2
-            Label:
-                text: "s421"
-            CheckBox:
-        
-            Label: 
-                text: "s401"
-            CheckBox:
+            rows: 3
+            Image:
+                source: 'NAlogo.png' 
+            GridLayout:
+                cols: 2
+                BoxLayout:
+                    orientation: 'horizontal'
+                    Label:
+                        text: "S401"
+                    CheckBox:
+                        id:s401
+                BoxLayout:
+                    Label:
+                        text: "S421"
+                    CheckBox:
+                        id:s421
+                BoxLayout
+                    Label:
+                        text: "S433"
+                    CheckBox:
+                        id:s433
+                BoxLayout:
+                    Label:
+                        text: "S416"
+                    CheckBox:
+                        id:s416
+                BoxLayout:
+                    Label:
+                        text: "S406"
+                    CheckBox:
+                        id:s406
+                BoxLayout:
+                    Label:
+                        text: "S434"
+                    CheckBox:
+                        id:s434
+                BoxLayout:
+                    Label:
+                        text: "S445"
+                    CheckBox:
+                        id:s445
+                BoxLayout:
+                    Label:
+                        text: "B401"
+                    CheckBox:
+                        id:b401
+
+            GridLayout:
+                cols: 2
+                Button:
+                    text: "StartLoad"
+                    size_hint: (None,None)
+                    widht: 200
+                    height: 50
+                    on_press: root.start_load()
+                    
+                Button:
+                    text: "StopLoad"
+                    size_hint: (None,None)
+                    widht: 200
+                    height: 50
+                    on_press: root.stop_load()
+                Button: 
+                    text: "StartTest"
+                    size_hint: (None,None)
+                    widht: 200
+                    height: 50
+                    on_press: root.start_test() 
+                Button:
+                    text: "StopTest"
+                    size_hint: (None,None)
+                    widht: 200
+                    height: 50
+                    on_press: root.stop_test()
+                    
+                    
+
+           
+        Label:
+            text: "test"
             
-                
-        Button:
-            text: "Submit"
-            font_size: 32

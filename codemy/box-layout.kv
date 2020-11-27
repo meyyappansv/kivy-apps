@@ -1,38 +1,15 @@
-#:import utils kivy.utils
-<MyGridLayout>
-    name:name
-    pizza:pizza
-    color:color
-
-    GridLayout:
-        cols: 1
+<MyBoxLayout>
+    BoxLayout:
+        orientation: "vertical"
+        spacing: 20
+        padding: 50
         size: root.width, root.height
-        GridLayout:
-            cols:2
-
-            Label:
-                text: "Name:"
-            TextInput:
-                multiline:False
-                id:name
-            Label:
-                text: "Favorite Pizza:"
-            TextInput:
-                multiline:False
-                id:pizza
-            Label:
-                text: "Favorite Color:"
-            TextInput:
-                multiline:False
-                id:color
         Button:
-            text: "Submit"
-            font_size: 32
-            on_press: root.press()
-            #RGBT -- Transparency
-            background_normal: ''
-            #Option 1 to specify colors in RGB values
-            #background_color: (30/255.0,145/255.0,158/255.0,1)
-            #Option 2 is to use the HEX utility 
-            background_color: utils.get_color_from_hex('#1e919e')
-        
+            text: "Hello World!"
+    
+        Button:
+            text: "Im hungry!"
+
+        Button:
+            text: "Text"
+            size_hint: (.5,.5)

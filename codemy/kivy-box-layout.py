@@ -8,25 +8,13 @@ from kivy.lang import Builder
 
 Builder.load_file('box-layout.kv')
 
-class MyGridLayout(Widget):
+class MyBoxLayout(Widget):
    
-    name = ObjectProperty(None)
-    pizza = ObjectProperty(None)
-    color = ObjectProperty(None)
-    def press(self):
-        name = self.name.text
-        pizza = self.pizza.text
-        color = self.color.text
-
-        print(f'Hello your name is {name}, your favorite pizza is {pizza}, your favorite color is {color}')
-        #self.add_widget(Label(text=f'Hello your name is {name}, your favorite pizza is {pizza}, your favorite color is {color}'))
-        self.name.text = ""
-        self.pizza.text = ""
-        self.color.text = ""
+   pass
 
 class MyAwesomeApp(App):
     def build(self):
-        return MyGridLayout()
+        return MyBoxLayout()
 
 
 if __name__ == "__main__":
